@@ -1,11 +1,11 @@
-//The type of DSin which array the first element will be greatest and it is similar to heap
-//The default Pirority queue is max heap.
+//The type of DS in which array the first element will be greatest and it is similar to heap
+//The default Priority queue is max heap.
 #include <iostream>
 #include<queue>
 using namespace std;
 
 int main() {
-    // Your code goes here
+
     priority_queue<int>maxi;
 
     priority_queue<int,vector<int>,greater<int>>mini;
@@ -16,24 +16,30 @@ int main() {
    maxi.push(0);
 
     cout<<"Size : "<<maxi.size()<<endl;
-
-   for(int i=0; i<maxi.size(); i++)
+    
+    int n=maxi.size();
+   for(int i=0; i<n; i++)
    {
        cout<<maxi.top()<<" ";
        maxi.pop();
    }
        cout<<endl;
-     
+       mini.push(1);
+       mini.push(3);
+       mini.push(2);
+       mini.push(0);
   
+     
 
+    cout<<"Size : "<<mini.size()<<endl;
     int m=mini.size();
     for(int i=0; i<m; i++)
     {
         cout<<mini.top()<<" ";
         mini.pop();
     }
-    cout<<endl;
-    cout<<"empty or not : "<<mini.empty()<<endl;
+        cout<<endl;
+        cout<<"empty or not : "<<mini.empty()<<endl;
 
 
 

@@ -16,7 +16,6 @@ int main() {
             secondMax = arr[i];
         }
     }
-
     cout << "Second largest element in the array: " << secondMax << endl;
 
     return 0;

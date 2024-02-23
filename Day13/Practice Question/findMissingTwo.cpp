@@ -18,7 +18,6 @@ int main() {
     int array[7] = {1, 2, 4, 3, 6, 7 };
 
     int missing = MissingNumber(array, n);
-
     cout << "The MissingNumber is: " << missing;
 
     return 0;

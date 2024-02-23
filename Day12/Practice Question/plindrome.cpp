@@ -18,6 +18,5 @@ int main() {
     } else {
         cout << "The array is not a palindrome." << endl;
     }
-
     return 0;
 }

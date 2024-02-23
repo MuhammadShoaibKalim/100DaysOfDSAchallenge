@@ -14,6 +14,5 @@ int main() {
     }
 
     cout << "Number of elements greater than " << threshold << ": " << count << endl;
-
     return 0;
 }

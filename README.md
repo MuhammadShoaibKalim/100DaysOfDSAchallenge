@@ -1,5 +1,4 @@
 ## Resources
-
 ### Video Tutorials
 - **Love Babbar**: Follow Love Babbar's YouTube channel for insightful explanations and problem-solving techniques.
 - **Fraz**: Explore Fraz's YouTube content for in-depth discussions on programming and algorithms.

@@ -10,6 +10,8 @@ bool isPresent(int arr[3][4], int n, int row, int col){
           return false;
       
 }
+
+
 int main() {
 
     

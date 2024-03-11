@@ -13,9 +13,7 @@ bool printSum(int arr[3][4], int row, int col){
           cout<<" The sum of : "<<sum<<endl;
       
 }
-int main() {
-
-    
+int main() {    
           int arr[3][4];
            
            //Taking input 

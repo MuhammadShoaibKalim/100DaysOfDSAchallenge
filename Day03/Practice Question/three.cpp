@@ -19,6 +19,7 @@ int main() {
     // } else {
     //     cout << "The entered number is not greater than 1." << endl;
     // }
+    
 
     while (i<=n)
     {

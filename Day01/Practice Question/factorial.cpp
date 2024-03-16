@@ -13,6 +13,7 @@ int main() {
         }
     } else {
         cout << "The given number is not greater than 1.";
+        
     }
 
     return 0;

@@ -1,6 +1,7 @@
 ## Resources
 
-# Data-Structures-RoadMap
+# Data-Structures-RoadMap 
+Original resource By (https://github.com/ZeeshanAdilButt/Data-Structures-RoadMap/blob/main/README.md) 
 # Data structures roadmap to solve 150+ leetcode problems in 5 weeks with a good understanding of basics and techniques
 
 Some considerations while starting with problem-solving till 100+ Leetcode problems are solved:

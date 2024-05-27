@@ -25,3 +25,38 @@ int main() {
 
     return 0;
 }
+
+/*
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 0, b = 1;
+    int sum = 0;
+    int number;
+
+    cout << "Enter the number of Fibonacci terms to print: ";
+    cin >> number;
+
+    if (number <= 0) {
+        cout << "Number of terms must be greater than 0." << endl;
+        return 1; // Exit the program with an error code
+    }
+
+    cout << a << " " << b; // Print the first two terms
+
+    for (int i = 3; i <= number; ++i) {
+        sum = a + b;
+        cout << " " << sum;
+        a = b;
+        b = sum;
+    }
+
+    cout << endl;
+
+    return 0;
+}
+adding another efficient solution here
+
+*/

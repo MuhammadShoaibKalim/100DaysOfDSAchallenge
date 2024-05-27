@@ -4,6 +4,10 @@ using namespace std;
 int main() {
     // HCF and LCM of Two Numbers
 
+
+
+    
+
     int a, b;
     cout << "Enter the values of two numbers: ";
     cin >> a >> b;

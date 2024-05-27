@@ -1,9 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
-
-
 int main() {
     // HCF and LCM of Two Numbers
 
@@ -31,3 +28,5 @@ int main() {
 
     return 0;
 }
+
+

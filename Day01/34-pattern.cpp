@@ -4,18 +4,18 @@ using namespace std;
 int main()
 {
     // Your code goes here
-    int i, j, n = 5, count = 1;
+    int i, j, n = 5, m = 9;
     for (size_t i = 1; i <= n; i++)
     {
-        for (size_t j = 1; j <= n; j++)
+        for (size_t j = 1; j <= m; j++)
         {
-            if (j <= n-i)
+            if (j >= 6 - i && j <= 4 + i)
             {
                 cout << "*";
             }
             else
             {
-                cout << " ";
+               cout << "";
             }
         }
         cout << endl;

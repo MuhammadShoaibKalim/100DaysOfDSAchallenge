@@ -4,14 +4,14 @@ using namespace std;
 int main()
 {
     // Your code goes here
-    int i, j, n = 5, count = 1;
-    for (size_t i = 1; i <= n; i++)
+    int i, j;
+    for (size_t i = 1; i <= 5; i++)
     {
-        for (size_t j = 1; j <= n; j++)
+        for (size_t j = 1; j <= 9; j++)
         {
-            if (j <= n-i)
+            if (j >= 6-i && j <=4+i)
             {
-                cout << "*";
+                cout << " * ";
             }
             else
             {

@@ -9,13 +9,13 @@ int main()
     {
         for (size_t j = 1; j <= 9; j++)
         {
-            if (j >= 6-i && j <=4+i)
+            if (j >= 7-i && j <=10+i)
             {
-                cout << " * ";
+                cout << " ";
             }
             else
             {
-                cout << " ";
+                cout << "*";
             }
         }
         cout << endl;

@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cmath>
-
 using namespace std;
 
 int main() {
@@ -19,7 +18,7 @@ int main() {
         firstDigit /= 10;
         
     }
-        
+          //adding first and last digit
          sum = firstDigit + lastDigit ;
 
     // Print the results

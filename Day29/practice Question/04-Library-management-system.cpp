@@ -14,6 +14,7 @@ public:
 
     Book(string t, string a, string i) : title(t), author(a), isbn(i), is_issued(false) {}
 
+
     void issue() {
         if (is_issued)
             cout << "Book already issued." << endl;

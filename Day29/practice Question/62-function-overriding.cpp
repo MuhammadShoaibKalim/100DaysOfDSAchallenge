@@ -1,21 +1,27 @@
-/*
-Declare Pointer Object 
-*/
-
 #include <iostream>
 using namespace std;
-class Parent{
-     public:
-        void print(int i) {
-            cout << "Printing int: " << i << endl;
-        }
-        
+
+class Rectangle {
+public:
+    int length;
+    int breadth;
+
+    Rectangle(int l, int b) : length(l), breadth(b) {}
+
+    int area() {
+        return length * breadth;
+    }
 };
+
 int main() {
-            Parent *p;
-            p = new Parent();
-            p->print(12);
-            p->print(12.5);
+    Rectangle *p= new Rectangle(10, 5);
     
+    // Rectangle *p;
+    // p = &rect;
+    cout << "Length: " << p->length << endl;
+    cout << "Breadth: " << p->breadth << endl;
+    cout << "Area: " << p->area() << endl;
+    
+
     return 0;
 }

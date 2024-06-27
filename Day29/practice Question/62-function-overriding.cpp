@@ -1,5 +1,5 @@
 /*
-Declare Pointer Object
+Declare Pointer Object 
 */
 
 #include <iostream>

@@ -127,3 +127,45 @@ int main() {
     return 0;
 }
 
+//Hybrid inheritance
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+    void display() {
+        cout << "Base class display function" << endl;
+    }
+};
+
+class Intermediate1 : public Base {
+public:
+    void show() {
+        cout << "Intermediate1 class show function" << endl;
+    }
+};
+
+class Intermediate2 : public Base {
+public:
+    void print() {
+        cout << "Intermediate2 class print function" << endl;
+    }
+};
+
+class Derived : public Intermediate1, public Intermediate2 {
+public:
+    void displayAll() {
+        cout << "Derived class displayAll function" << endl;
+    }
+};
+
+int main() {
+    Derived d;
+    d.display();
+    d.show();
+    d.print();
+    d.displayAll();
+    return 0;
+}
+
+

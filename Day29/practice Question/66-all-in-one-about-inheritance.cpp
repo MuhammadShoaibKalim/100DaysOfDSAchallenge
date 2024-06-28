@@ -168,4 +168,33 @@ int main() {
     return 0;
 }
 
+//Virtual function/override
+
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+    virtual void display() {
+        cout << "Base class display function" << endl;
+    }
+};
+
+class Derived : public Base {
+public:
+    void display() override {
+        cout << "Derived class display function" << endl;
+    }
+};
+
+int main() {
+    Base* b;
+    Derived d;
+    b = &d;
+    b->display();
+    return 0;
+}
+
+
+//Eary Binding
 

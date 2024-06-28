@@ -57,3 +57,37 @@ int main() {
     d.print();
     return 0;
 }
+
+//Multilevel inheritance
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+    void display() {
+        cout << "Base class display function" << endl;
+    }
+};
+
+class Intermediate : public Base {
+public:
+    void show() {
+        cout << "Intermediate class show function" << endl;
+    }
+};
+
+class Derived : public Intermediate {
+public:
+    void print() {
+        cout << "Derived class print function" << endl;
+    }
+};
+
+int main() {
+    Derived d;
+    d.display();
+    d.show();
+    d.print();
+    return 0;
+}
+

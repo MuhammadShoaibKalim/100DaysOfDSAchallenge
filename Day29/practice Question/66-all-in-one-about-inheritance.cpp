@@ -319,3 +319,34 @@ int main() {
 
     return 0;
 }
+
+//Late Binding
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+    virtual void display() {
+        cout << "Base class display function" << endl;
+    }
+};
+
+class Derived : public Base {
+public:
+    void display() override {
+        cout << "Derived class display function" << endl;
+    }
+};
+
+int main() {
+    Base b;
+    Derived d;
+
+    b.display(); // Calls Base::display()
+    d.display(); // Calls Derived::display()
+
+    Base* basePtr = &d;
+    basePtr->display(); // Calls Derived::display() due to late binding
+
+    return 0;
+}

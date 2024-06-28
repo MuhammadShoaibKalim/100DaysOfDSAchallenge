@@ -248,3 +248,43 @@ int main() {
     b->display();
     return 0;
 }
+
+//Polymerphism
+#include <iostream>
+using namespace std;
+
+class Shape {
+public:
+    virtual void draw() {
+        cout << "Drawing Shape" << endl;
+    }
+};
+
+class Circle : public Shape {
+public:
+    void draw() override {
+        cout << "Drawing Circle" << endl;
+    }
+};
+
+class Square : public Shape {
+public:
+    void draw() override {
+        cout << "Drawing Square" << endl;
+    }
+};
+
+int main() {
+    Shape* shape;
+    Circle circle;
+    Square square;
+
+    shape = &circle;
+    shape->draw();
+
+    shape = &square;
+    shape->draw();
+
+    return 0;
+}
+

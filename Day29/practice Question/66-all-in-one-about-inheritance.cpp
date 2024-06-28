@@ -288,3 +288,34 @@ int main() {
     return 0;
 }
 
+
+//function override 
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+    virtual void display() {
+        cout << "Base class display function" << endl;
+    }
+};
+
+class Derived : public Base {
+public:
+    void display() override {
+        cout << "Derived class display function" << endl;
+    }
+};
+
+int main() {
+    Base b;
+    Derived d;
+
+    b.display();
+    d.display();
+
+    Base* basePtr = &d;
+    basePtr->display();
+
+    return 0;
+}

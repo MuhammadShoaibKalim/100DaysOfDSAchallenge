@@ -1,3 +1,13 @@
+/*
+Write a class name Teacher having attributes teacher_name, teacher_age,
+teacher_address, teacher_books written by him and it contains member of book
+that get and show the output.
+Write another class name Writer contains attributes writer_name, writer_address, 
+ writer_books written by him and it contains member function to get input and display output.
+Another class Scholar inherit from both Teacher and Writer.
+
+*/
+
 #include <iostream>
 #include <string>
 using namespace std;

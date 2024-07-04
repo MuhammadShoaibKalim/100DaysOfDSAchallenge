@@ -21,6 +21,18 @@ using namespace std;
             cout << "Model: " << model << endl;
             cout << "Retail Price: $" << retail_price << endl;
          }
+         void changeValue(string brand, string model, float retail)
+         {
+            cout << "Brand Name change: " << brand_name << endl;
+            cout << "Model change: " << model << endl;
+            cout << "Retail Price change: $" << retail_price << endl;
+         }
+  void changeValue(string brand, string model, float retail)
+         {
+            cout << "Brand Name change: " << brand_name << endl;
+            cout << "Model change: " << model << endl;
+            cout << "Retail Price change: $" << retail_price << endl;
+         }
  };
 int main() {
           float price;
@@ -28,6 +40,12 @@ int main() {
 
           TV tv1("PEL", "2022", 12333.9);
           tv1.display();
+
+          cout<<endl;
+          tv1.changeValue("Dell", "2024",1222.4);
+
+          cout<<endl;
+          tv1.changeValue("Dell", "2024",1222.4);
     
     return 0;
 }

@@ -1,3 +1,17 @@
+/*
+Imagine a publishing company that markets both book and audio cassettes. 
+
+1-Create a class Publication that stores the price (float type) of a publication.
+
+2-From this class drive two classes Book which adds a page count(type int) and 
+Tape which adds a playing time in minutes (type float).
+
+3- Each of these three classes should have a getData function to get its data from  
+the user at the keyboard and a putData() function to display its data object.
+
+4- Write a main() function to test Book and Tape classes by creating objects of them 
+and then display the data.
+*/
 #include <iostream>
 using namespace std;
 

@@ -1,7 +1,7 @@
 /*
-Imagine a publishing company that markets both book and audio cassettes. 
+Imagine a publishing company that markets both books and audio cassettes. 
 
-1-Create a class Publication that stores the price (float type) of a publication.
+1- Create a class Publication that stores a publication's price (float type).
 
 2-From this class drive two classes Book which adds a page count(type int) and 
 Tape which adds a playing time in minutes (type float).
@@ -14,7 +14,6 @@ and then display the data.
 */
 #include <iostream>
 using namespace std;
-
 class Publication {
 protected:
     float price;

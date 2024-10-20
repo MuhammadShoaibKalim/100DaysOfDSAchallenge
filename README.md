@@ -36,12 +36,25 @@ Familiarity with basic mathematical concepts, patterns, and problem-solving tech
 - **Description**: A collection of elements identified by index or key.
 - **Syntax**: 
     ```cpp
-    int arr[size];
+    int arr[5] = {1, 2, 3, 4, 5};
     ```
 - **Importance**: Fast access to elements using indexes.
 - **Applications**: Used in sorting algorithms, storing data in a linear fashion.
 - **Use Cases**: Storing data in a contiguous block.
 - **Difference with Other Structures**: Fixed size, can lead to wastage of space.
+- **Code Example**:
+    ```cpp
+    #include <iostream>
+    using namespace std;
+
+    int main() {
+        int arr[5] = {1, 2, 3, 4, 5};
+        for (int i = 0; i < 5; i++) {
+            cout << arr[i] << " ";
+        }
+        return 0;
+    }
+    ```
 
 ---
 
@@ -55,6 +68,18 @@ Familiarity with basic mathematical concepts, patterns, and problem-solving tech
 - **Applications**: Used in data parsing, manipulation, and analysis.
 - **Use Cases**: Handling user input, generating formatted output.
 - **Difference with Other Structures**: Immutable vs mutable strings.
+- **Code Example**:
+    ```cpp
+    #include <iostream>
+    #include <string>
+    using namespace std;
+
+    int main() {
+        string str = "Hello, World!";
+        cout << str.length() << endl; // Output: 13
+        return 0;
+    }
+    ```
 
 ---
 
@@ -69,6 +94,20 @@ Familiarity with basic mathematical concepts, patterns, and problem-solving tech
 - **Applications**: Caching, counting frequency of elements.
 - **Use Cases**: Implementing dictionaries, frequency maps.
 - **Difference with Other Structures**: No inherent order, allows fast retrieval.
+- **Code Example**:
+    ```cpp
+    #include <iostream>
+    #include <unordered_map>
+    using namespace std;
+
+    int main() {
+        unordered_map<int, string> map;
+        map[1] = "One";
+        map[2] = "Two";
+        cout << map[1] << endl; // Output: One
+        return 0;
+    }
+    ```
 
 ---
 
@@ -85,6 +124,34 @@ Familiarity with basic mathematical concepts, patterns, and problem-solving tech
 - **Applications**: Implementing stacks, queues, and adjacency lists.
 - **Use Cases**: Situations where frequent insertions/deletions occur.
 - **Difference with Other Structures**: Non-contiguous memory allocation.
+- **Code Example**:
+    ```cpp
+    #include <iostream>
+    using namespace std;
+
+    struct Node {
+        int data;
+        Node* next;
+    };
+
+    void printList(Node* n) {
+        while (n != nullptr) {
+            cout << n->data << " ";
+            n = n->next;
+        }
+    }
+
+    int main() {
+        Node* head = new Node();
+        head->data = 1;
+        head->next = new Node();
+        head->next->data = 2;
+        head->next->next = nullptr;
+
+        printList(head); // Output: 1 2
+        return 0;
+    }
+    ```
 
 ---
 
@@ -98,6 +165,22 @@ Familiarity with basic mathematical concepts, patterns, and problem-solving tech
 - **Applications**: Resizing data structures as needed.
 - **Use Cases**: Storing lists where the size is not known beforehand.
 - **Difference with Other Structures**: More overhead than static arrays.
+- **Code Example**:
+    ```cpp
+    #include <iostream>
+    #include <vector>
+    using namespace std;
+
+    int main() {
+        vector<int> vec = {1, 2, 3, 4, 5};
+        vec.push_back(6); // Add an element
+
+        for (int i : vec) {
+            cout << i << " ";
+        }
+        return 0;
+    }
+    ```
 
 ---
 
@@ -111,6 +194,23 @@ Familiarity with basic mathematical concepts, patterns, and problem-solving tech
 - **Applications**: Parsing expressions, function call management.
 - **Use Cases**: Undo mechanisms in applications.
 - **Difference with Other Structures**: Restrictive access (only top element).
+- **Code Example**:
+    ```cpp
+    #include <iostream>
+    #include <stack>
+    using namespace std;
+
+    int main() {
+        stack<int> stack;
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        cout << stack.top() << endl; // Output: 3
+        stack.pop();
+        cout << stack.top() << endl; // Output: 2
+        return 0;
+    }
+    ```
 
 ---
 
@@ -124,6 +224,23 @@ Familiarity with basic mathematical concepts, patterns, and problem-solving tech
 - **Applications**: Buffer management, resource sharing.
 - **Use Cases**: Print queues, task scheduling.
 - **Difference with Other Structures**: Enqueue and dequeue operations.
+- **Code Example**:
+    ```cpp
+    #include <iostream>
+    #include <queue>
+    using namespace std;
+
+    int main() {
+        queue<int> queue;
+        queue.push(1);
+        queue.push(2);
+        queue.push(3);
+        cout << queue.front() << endl; // Output: 1
+        queue.pop();
+        cout << queue.front() << endl; // Output: 2
+        return 0;
+    }
+    ```
 
 ---
 
@@ -140,6 +257,21 @@ Familiarity with basic mathematical concepts, patterns, and problem-solving tech
 - **Applications**: Tree traversals, backtracking problems.
 - **Use Cases**: Factorials, Fibonacci series.
 - **Difference with Other Structures**: Can lead to stack overflow if not managed.
+- **Code Example**:
+    ```cpp
+    #include <iostream>
+    using namespace std;
+
+    int factorial(int n) {
+        if (n <= 1) return 1;
+        return n * factorial(n - 1);
+    }
+
+    int main() {
+        cout << factorial(5) << endl; // Output: 120
+        return 0;
+    }
+    ```
 
 ---
 
@@ -157,6 +289,34 @@ Familiarity with basic mathematical concepts, patterns, and problem-solving tech
 - **Applications**: File systems, databases.
 - **Use Cases**: Binary search trees, heaps.
 - **Difference with Other Structures**: Non-linear, parent-child relationships.
+- **Code Example**:
+    ```cpp
+    #include <iostream>
+    using namespace std;
+
+    struct TreeNode {
+        int value;
+        TreeNode* left;
+        TreeNode* right;
+    };
+
+    void inorder(TreeNode* root) {
+        if (root) {
+            inorder(root->left);
+            cout << root->value << " ";
+            inorder(root->right);
+        }
+    }
+
+    int main() {
+        TreeNode* root = new TreeNode{1, nullptr, nullptr};
+        root->left = new TreeNode{2, nullptr, nullptr};
+        root->right = new TreeNode{3, nullptr, nullptr};
+
+        inorder(root); // Output: 2 1 3
+        return 0;
+    }
+    ```
 
 ---
 
@@ -170,6 +330,40 @@ Familiarity with basic mathematical concepts, patterns, and problem-solving tech
 - **Applications**: Social networks, route planning.
 - **Use Cases**: Finding the shortest path, network flow problems.
 - **Difference with Other Structures**: Can be directed or undirected, weighted or unweighted.
+- **Code Example**:
+    ```cpp
+    #include <iostream>
+    #include <vector>
+    using namespace std;
+
+    void addEdge(vector<vector<int>>& graph, int u, int v) {
+        graph[u].push_back(v);
+        graph[v].push_back(u); // For undirected graph
+    }
+
+    void printGraph(const vector<vector<int>>& graph) {
+        for (int i = 0; i < graph.size(); i++) {
+            cout << "Vertex " << i << ": ";
+            for (int j : graph[i]) {
+                cout << j << " ";
+            }
+            cout << endl;
+        }
+    }
+
+    int main() {
+        int V = 5; // Number of vertices
+        vector<vector<int>> graph(V);
+        addEdge(graph, 0, 1);
+        addEdge(graph, 0, 4);
+        addEdge(graph, 1, 3);
+        addEdge(graph, 1, 4);
+        addEdge(graph, 3, 4);
+
+        printGraph(graph);
+        return 0;
+    }
+    ```
 
 ---
 
